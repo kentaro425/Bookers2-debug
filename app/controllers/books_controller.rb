@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     @books = Book.new
     @user = @book.user
     @post_comment = PostComment.new
+    impressionist(@book, nil, unique: [:ip_address])
   end
 
   def index
